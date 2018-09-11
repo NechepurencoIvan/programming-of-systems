@@ -1,0 +1,168 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_af91a2bbcf8503220902f34408d9c2662}{infinite\+Solutions}}~std\+::vector$<$double$>$(\{0, 0, 0, 0\});
+\item 
+\#define \mbox{\hyperlink{main_8cpp_ad949e3cc6bbdc52d246362219cd92458}{epsilont}}~0.\+00001
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_acc846d396ddcc0087d950173ab022777}{read\+Coefficients}} (double \&a, double \&b, double \&c)
+\item 
+bool \mbox{\hyperlink{main_8cpp_aa7dbab2f54023d04539ff2cee2fb3b3e}{equals}} (const double d1, const double d2)
+\item 
+void \mbox{\hyperlink{main_8cpp_a05bb5946a26a3e51153e566e124bbdbd}{normalize}} (std\+::vector$<$ double $>$ \&solutions)
+\item 
+void \mbox{\hyperlink{main_8cpp_aa63388064f39a82b529beb374005d08e}{print\+Solution}} (const std\+::vector$<$ double $>$ \&solutions)
+\item 
+void \mbox{\hyperlink{main_8cpp_a96458832cd17173925277541f3acdf02}{solve\+Linear\+Equation}} (const double b, const double c, std\+::vector$<$ double $>$ \&solutions)
+\item 
+double \mbox{\hyperlink{main_8cpp_ac7cdcb0cf80a39a00cabadcc3b66f0a2}{get\+Determinant}} (const double a, const double b, const double c)
+\item 
+void \mbox{\hyperlink{main_8cpp_a817cbdbbe8daaf0afa7822e774458fb0}{solve\+Equation}} (const double a, const double b, const double c, std\+::vector$<$ double $>$ \&solutions)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8cpp_ad949e3cc6bbdc52d246362219cd92458}\label{main_8cpp_ad949e3cc6bbdc52d246362219cd92458}} 
+\index{main.\+cpp@{main.\+cpp}!epsilont@{epsilont}}
+\index{epsilont@{epsilont}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{epsilont}{epsilont}}
+{\footnotesize\ttfamily \#define epsilont~0.\+00001}
+
+\mbox{\Hypertarget{main_8cpp_af91a2bbcf8503220902f34408d9c2662}\label{main_8cpp_af91a2bbcf8503220902f34408d9c2662}} 
+\index{main.\+cpp@{main.\+cpp}!infinite\+Solutions@{infinite\+Solutions}}
+\index{infinite\+Solutions@{infinite\+Solutions}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{infinite\+Solutions}{infiniteSolutions}}
+{\footnotesize\ttfamily \#define infinite\+Solutions~std\+::vector$<$double$>$(\{0, 0, 0, 0\});}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_aa7dbab2f54023d04539ff2cee2fb3b3e}\label{main_8cpp_aa7dbab2f54023d04539ff2cee2fb3b3e}} 
+\index{main.\+cpp@{main.\+cpp}!equals@{equals}}
+\index{equals@{equals}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily bool equals (\begin{DoxyParamCaption}\item[{const double}]{d1,  }\item[{const double}]{d2 }\end{DoxyParamCaption})}
+
+Сравнивает данные переменные на равенство с учетом погрешности 
+\begin{DoxyParams}{Parameters}
+{\em d1} & первая переменная \\
+\hline
+{\em d2} & вторая переменная \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ответ, равны ли переменные 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ac7cdcb0cf80a39a00cabadcc3b66f0a2}\label{main_8cpp_ac7cdcb0cf80a39a00cabadcc3b66f0a2}} 
+\index{main.\+cpp@{main.\+cpp}!get\+Determinant@{get\+Determinant}}
+\index{get\+Determinant@{get\+Determinant}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Determinant()}{getDeterminant()}}
+{\footnotesize\ttfamily double get\+Determinant (\begin{DoxyParamCaption}\item[{const double}]{a,  }\item[{const double}]{b,  }\item[{const double}]{c }\end{DoxyParamCaption})}
+
+вычисляеи детерминант квадратного уравнения 
+\begin{DoxyParams}{Parameters}
+{\em a} & старший коэффициент \\
+\hline
+{\em b} & коэффициент линейного члена \\
+\hline
+{\em c} & свободный член \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+детерминант 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{main_8cpp_a05bb5946a26a3e51153e566e124bbdbd}\label{main_8cpp_a05bb5946a26a3e51153e566e124bbdbd}} 
+\index{main.\+cpp@{main.\+cpp}!normalize@{normalize}}
+\index{normalize@{normalize}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily void normalize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$ \&}]{solutions }\end{DoxyParamCaption})}
+
+Избавляет вектор решений от -\/0 -\/ей 
+\begin{DoxyParams}{Parameters}
+{\em solutions} & полученные решения \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{main_8cpp_aa63388064f39a82b529beb374005d08e}\label{main_8cpp_aa63388064f39a82b529beb374005d08e}} 
+\index{main.\+cpp@{main.\+cpp}!print\+Solution@{print\+Solution}}
+\index{print\+Solution@{print\+Solution}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Solution()}{printSolution()}}
+{\footnotesize\ttfamily void print\+Solution (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{solutions }\end{DoxyParamCaption})}
+
+Выврдит решения на экран 
+\begin{DoxyParams}{Parameters}
+{\em solutions} & вектор с решениями уравнения \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_acc846d396ddcc0087d950173ab022777}\label{main_8cpp_acc846d396ddcc0087d950173ab022777}} 
+\index{main.\+cpp@{main.\+cpp}!read\+Coefficients@{read\+Coefficients}}
+\index{read\+Coefficients@{read\+Coefficients}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Coefficients()}{readCoefficients()}}
+{\footnotesize\ttfamily void read\+Coefficients (\begin{DoxyParamCaption}\item[{double \&}]{a,  }\item[{double \&}]{b,  }\item[{double \&}]{c }\end{DoxyParamCaption})}
+
+Считывает коэффициенты с потока ввода 
+\begin{DoxyParams}{Parameters}
+{\em a} & старший коэффициент \\
+\hline
+{\em b} & коэффициент линейного члена \\
+\hline
+{\em c} & свободный член \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a817cbdbbe8daaf0afa7822e774458fb0}\label{main_8cpp_a817cbdbbe8daaf0afa7822e774458fb0}} 
+\index{main.\+cpp@{main.\+cpp}!solve\+Equation@{solve\+Equation}}
+\index{solve\+Equation@{solve\+Equation}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{solve\+Equation()}{solveEquation()}}
+{\footnotesize\ttfamily void solve\+Equation (\begin{DoxyParamCaption}\item[{const double}]{a,  }\item[{const double}]{b,  }\item[{const double}]{c,  }\item[{std\+::vector$<$ double $>$ \&}]{solutions }\end{DoxyParamCaption})}
+
+решает квадратное уравнение 
+\begin{DoxyParams}{Parameters}
+{\em a} & старший коэффициент \\
+\hline
+{\em b} & коэффициент линейного члена \\
+\hline
+{\em c} & свободный член \\
+\hline
+{\em solutions} & вектор решений \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{main_8cpp_a96458832cd17173925277541f3acdf02}\label{main_8cpp_a96458832cd17173925277541f3acdf02}} 
+\index{main.\+cpp@{main.\+cpp}!solve\+Linear\+Equation@{solve\+Linear\+Equation}}
+\index{solve\+Linear\+Equation@{solve\+Linear\+Equation}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{solve\+Linear\+Equation()}{solveLinearEquation()}}
+{\footnotesize\ttfamily void solve\+Linear\+Equation (\begin{DoxyParamCaption}\item[{const double}]{b,  }\item[{const double}]{c,  }\item[{std\+::vector$<$ double $>$ \&}]{solutions }\end{DoxyParamCaption})}
+
+решает линейное уравнение 
+\begin{DoxyParams}{Parameters}
+{\em b} & коэффициент линейного члена \\
+\hline
+{\em c} & свободный член \\
+\hline
+{\em solutions} & вектор решений \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 4
