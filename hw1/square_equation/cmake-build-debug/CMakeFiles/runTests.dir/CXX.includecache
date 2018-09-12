@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/tests.cpp
+whattotest.cpp
+/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/whattotest.cpp
+gtest/gtest.h
+-
+
+/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/whattotest.cpp
+math.h
+-
+

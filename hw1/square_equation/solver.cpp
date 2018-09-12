@@ -2,8 +2,8 @@
 #include <vector>
 #include <cmath>
 
-#define infiniteSolutions  std::vector<double>({0, 0, 0, 0});
-#define epsilont  0.00001
+#define INFINITESOLUTIONS  std::vector<double>({0, 0, 0, 0})
+#define EPSILONT  0.00001
 
 /**
  * Считывает коэффициенты с потока ввода
@@ -24,7 +24,7 @@ void readCoefficients(double& a, double& b, double& c){
  */
 
 bool equals(const double d1, const double d2) {
-    return (d1 - d2 < epsilont) && (d1 - d2 > -epsilont);
+    return (d1 - d2 < EPSILONT) && (d1 - d2 > -EPSILONT);
 }
 
 /**
@@ -59,6 +59,7 @@ void printSolution(const std::vector<double>& solutions) {
             std::cout<<" infinitely many solutions"<<std::endl;
     }
 }
+
 /**
  * решает линейное уравнение
  * @param b коэффициент линейного члена
@@ -68,7 +69,7 @@ void printSolution(const std::vector<double>& solutions) {
 void solveLinearEquation(const double b, const double c, std::vector<double>& solutions) {
     if(equals(b, 0)){
         if (equals(c, 0)) {
-            solutions = infiniteSolutions;
+            solutions = INFINITESOLUTIONS;
             return;
         } else {
             return;
@@ -93,30 +94,32 @@ double getDeterminant(const double a, const double b, const double c){
  * @param c свободный член
  * @param solutions вектор решений
  */
-void solveEquation(const double a, const double b, const double c, std::vector<double>& solutions) {
+
+std::vector<double> solveEquation(const double a, const double b, const double c) {
+    std::vector<double> solutions = {};
     if(equals(a, 0) ){
         solveLinearEquation(b, c, solutions);
     } else {
         double d = getDeterminant(a, b, c);
         if(equals(d, 0)){
             solutions = {-b / 2 / a};
-            return;
+            return solutions;
         }
         if(d < 0){
-            return;
+            return solutions;
         }
         double x1 = (-b - std::sqrt(d))/(2 * a);//Дважды считать корень?
         double x2 = (-b + std::sqrt(d))/(2 * a);
         solutions = {x1, x2};
     }
+    return solutions;
 }
 
-int main() {
+void consoleWork(){
     double a, b, c;
     std::vector<double> solutions;
     readCoefficients(a, b, c);
-    solveEquation(a, b, c, solutions);
+    solveEquation(a, b, c);
     normalize(solutions);
     printSolution(solutions);
-    return 0;
 }

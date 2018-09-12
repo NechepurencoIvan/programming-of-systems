@@ -48,10 +48,10 @@ RM = /home/ivan/CLion-2018.1.2/clion-2018.1.2/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivan/CLionProjects/untitled
+CMAKE_SOURCE_DIR = "/home/ivan/Рабочий стол/nepotrata/hw1/square_equation"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivan/CLionProjects/untitled/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/CLionProjects/untitled/cmake-build-debug/CMakeFiles /home/ivan/CLionProjects/untitled/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/cmake-build-debug/CMakeFiles" "/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan/CLionProjects/untitled/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named runTests
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 untitled
-.PHONY : untitled
+runTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runTests
+.PHONY : runTests
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
+runTests/fast:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/build
+.PHONY : runTests/fast
 
-main.o: main.cpp.o
+tests.o: tests.cpp.o
 
-.PHONY : main.o
+.PHONY : tests.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.o
-.PHONY : main.cpp.o
+tests.cpp.o:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/tests.cpp.o
+.PHONY : tests.cpp.o
 
-main.i: main.cpp.i
+tests.i: tests.cpp.i
 
-.PHONY : main.i
+.PHONY : tests.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.i
-.PHONY : main.cpp.i
+tests.cpp.i:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/tests.cpp.i
+.PHONY : tests.cpp.i
 
-main.s: main.cpp.s
+tests.s: tests.cpp.s
 
-.PHONY : main.s
+.PHONY : tests.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.s
-.PHONY : main.cpp.s
+tests.cpp.s:
+	$(MAKE) -f CMakeFiles/runTests.dir/build.make CMakeFiles/runTests.dir/tests.cpp.s
+.PHONY : tests.cpp.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... untitled"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... runTests"
+	@echo "... tests.o"
+	@echo "... tests.i"
+	@echo "... tests.s"
 .PHONY : help
 
 

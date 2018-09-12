@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivan/CLionProjects/untitled
+# Install script for directory: /home/ivan/Рабочий стол/nepotrata/hw1/square_equation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ivan/CLionProjects/untitled/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

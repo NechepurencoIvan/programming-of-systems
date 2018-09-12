@@ -1,0 +1,3 @@
+/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/CMakeFiles/rebuild_cache.dir
+/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/CMakeFiles/edit_cache.dir
+/home/ivan/Рабочий стол/nepotrata/hw1/square_equation/CMakeFiles/runTests.dir
