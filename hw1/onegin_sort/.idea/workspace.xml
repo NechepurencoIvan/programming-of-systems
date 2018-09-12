@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="onegin_sort" targetName="onegin_sort" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c47a7029-b37d-4b5a-8b92-5c41dd1d17a1" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1053">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#859#1177#0" />
+                <element signature="e#2975#3266#0" />
+                <element signature="e#3337#3403#0" />
+                <element signature="e#3409#3603#0" />
+                <element signature="e#4197#4292#0" />
+                <element signature="e#4294#4475#0" />
+                <element signature="e#3616#3871#0" />
+                <element signature="e#3874#3952#0" />
+                <element signature="e#2040#2337#0" />
+                <element signature="e#2264#2585#0" />
+                <element signature="e#3507#4338#0" />
+                <element signature="e#4176#4387#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="hamlet.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hamlet.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="4886" column="12" selection-start-line="4886" selection-start-column="12" selection-end-line="4886" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="output2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/output2">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Z</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Evgeniy-Onegin.txt" />
+        <option value="$PROJECT_DIR$/hamlet.txt" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="474" />
+    <option name="y" value="87" />
+    <option name="width" value="1381" />
+    <option name="height" value="791" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="onegin_sort" type="b2602c69:ProjectViewProjectNode" />
+              <item name="onegin_sort" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.onegin_sort">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="onegin_sort" RUN_TARGET_NAME="onegin_sort" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="onegin_sort" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="onegin_sort" TARGET_NAME="onegin_sort" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="onegin_sort" RUN_TARGET_NAME="onegin_sort" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.onegin_sort" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c47a7029-b37d-4b5a-8b92-5c41dd1d17a1" name="Default" comment="" />
+      <created>1536691890625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536691890625</updated>
+      <workItem from="1536691896572" duration="7408000" />
+      <workItem from="1536700475484" duration="7933000" />
+      <workItem from="1536769154353" duration="12411000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="27752000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24986508" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49973017" weight="0.32946146" />
+      <window_info anchor="bottom" id="CMake" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.14355099" side_tool="true" weight="0.32946146" />
+      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.856449" visible="true" weight="0.36114043" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32946146" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#859#1177#0" />
+            <element signature="e#2975#3266#0" />
+            <element signature="e#3337#3403#0" />
+            <element signature="e#3409#3603#0" />
+            <element signature="e#4197#4292#0" />
+            <element signature="e#4294#4475#0" />
+            <element signature="e#3616#3871#0" />
+            <element signature="e#3874#3952#0" />
+            <element signature="e#2040#2337#0" />
+            <element signature="e#2264#2585#0" />
+            <element signature="e#3507#4338#0" />
+            <element signature="e#4176#4387#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamlet.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107492">
+          <caret line="4886" column="12" selection-start-line="4886" selection-start-column="12" selection-end-line="4886" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1694">
+          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#859#1177#0" />
+            <element signature="e#2975#3266#0" />
+            <element signature="e#3337#3403#0" />
+            <element signature="e#3409#3603#0" />
+            <element signature="e#4197#4292#0" />
+            <element signature="e#4294#4475#0" />
+            <element signature="e#3616#3871#0" />
+            <element signature="e#3874#3952#0" />
+            <element signature="e#2040#2337#0" />
+            <element signature="e#2264#2585#0" />
+            <element signature="e#3507#4338#0" />
+            <element signature="e#4176#4387#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamlet.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107492">
+          <caret line="4886" column="12" lean-forward="true" selection-start-line="4886" selection-start-column="12" selection-end-line="4886" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamlet2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="48" lean-forward="true" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Evgeniy-Onegin.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamlet2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output2">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hamlet.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="4886" column="12" selection-start-line="4886" selection-start-column="12" selection-end-line="4886" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1053">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#859#1177#0" />
+            <element signature="e#2975#3266#0" />
+            <element signature="e#3337#3403#0" />
+            <element signature="e#3409#3603#0" />
+            <element signature="e#4197#4292#0" />
+            <element signature="e#4294#4475#0" />
+            <element signature="e#3616#3871#0" />
+            <element signature="e#3874#3952#0" />
+            <element signature="e#2040#2337#0" />
+            <element signature="e#2264#2585#0" />
+            <element signature="e#3507#4338#0" />
+            <element signature="e#4176#4387#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
