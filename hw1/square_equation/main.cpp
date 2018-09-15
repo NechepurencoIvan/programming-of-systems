@@ -12,6 +12,8 @@
  * @param c свободный член
  */
 void readCoefficients(double& a, double& b, double& c){
+    /* seems like any hell I feed your program will be handled w/o any error reports */
+    /* try ro run with the following input: "w w w", I bet it is not reporting any errors */
     std::cout<<"Please enter coefficients a, b, c of equation \"ax^2 + bx + c = 0\": ";
     std::cin>>a>>b>>c;
 }
@@ -102,6 +104,7 @@ void solveEquation(const double a, const double b, const double c, std::vector<d
             solutions = {-b / 2 / a};
             return;
         }
+        /* Suggest that you add epsilong here too to be consistent, reasonably huh? */
         if(d < 0){
             return;
         }
