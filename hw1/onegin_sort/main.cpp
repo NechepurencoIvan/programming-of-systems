@@ -22,6 +22,9 @@ bool lessEq(std::string &str1, std::string &str2, size_t startIndex = 0) {
 
 class quickSorter {
 public:
+/**
+ * считывает текст, сохраняет его в массив, фильтрует пустые строки.
+ */
     quickSorter() {
         text = {};
         std::ifstream input;
@@ -34,11 +37,17 @@ public:
         }
         input.close();
     }
-
+/**
+ * запускает быструю сортировку текста3
+ */
     void sortText() {
         quickSortIteration(0, text.size());
     }
 
+    /**
+     * выполняет проверку сортировки
+     * @return true, если массив действительно упорядоченный
+     */
     bool checkSort() {
         for (size_t i = 2; i < text.size(); ++i) {
             if (!lessEq(text[i - 1], text[i])) {
@@ -48,12 +57,17 @@ public:
         return true;
     }
 
+/**
+ * выводит сортированный текст на экран
+ */
     void printText() {
         for (std::string &str : text) {
             std::cout << str << std::endl;
         }
     }
-
+/**
+ * записывает отсортированный текст в файл
+ */
     void writeText() {
         std::ofstream output;
         output.open(OUTPUTPATH, std::ios::out);
@@ -74,12 +88,19 @@ private:
  * @return индекс элемента, который мы берем опорным
  */
     size_t findPivotPosition(size_t a, size_t b) {
-        //return (b + a) / 2;
         size_t pivotPosition = getMedianOfThreeStrings(a, b);
         assert(pivotPosition >= a && pivotPosition < b);
         return pivotPosition;
     }
-
+/**
+ * проверяет, является ли символ на данной позиции наибольшим / наименьшим
+ * среди трех данных строк
+ * @param indexes индексы трех данных строк
+ * @param foundSmallest показатель, является ли символ наименьшийм
+ * @param ind номер проверяемой строки в массиве ind
+ * @param pos позици, на которой производим проверку
+ * @return true, если символ действительно наибольший / наименьший
+ */
     bool checkSymbolIsExtremal(size_t* indexes, bool& foundSmallest, size_t ind, size_t pos){
         size_t ind1 = (ind + 1) % 3;
         size_t ind2 = (ind + 2) % 3;
@@ -99,15 +120,23 @@ private:
         }
         return false;
     }
-
-    bool findSuperfulousSring(size_t* indexes, bool& foundSmallest, size_t& superfuloudIndex, size_t i){
+/**
+ * решает, можно ли на данной позиции сказать, является ли одна из трех строк
+ * больше/меньше остальных
+ * @param indexes indexes индексы трех данных строк
+ * @param foundSmallest показатель, если найденная строка наименьшей
+ * @param superfuloudIndex индекс строки, которая потенциально
+ * @param pos
+ * @return
+ */
+    bool findSuperfulousSring(size_t* indexes, bool& foundSmallest, size_t& superfuloudIndex, size_t pos){
         for(size_t j = 0; j < 2; ++j){
-            if(i >= text[indexes[j]].size()) {
+            if(pos >= text[indexes[j]].size()) {
                 foundSmallest = true;
                 superfuloudIndex = j;
                 return true;
             }
-            if(checkSymbolIsExtremal(indexes, foundSmallest, j, i)){
+            if(checkSymbolIsExtremal(indexes, foundSmallest, j, pos)){
                 superfuloudIndex = j;
                 return true;
             }

@@ -2,7 +2,7 @@
 #include <vector>
 #include <cmath>
 
-#define INFINITESOLUTIONS  std::vector<double>({0, 0, 0, 0})
+#define INFINITESOLUTIONS 100
 #define EPSILONT  0.00001
 
 /**
@@ -43,7 +43,6 @@ void normalize(std::vector<double>& solutions){
  * Выврдит решения на экран
  * @param solutions вектор с решениями уравнения
  */
-
 void printSolution(const std::vector<double>& solutions) {
     switch(solutions.size()){
         case 0:
@@ -66,17 +65,18 @@ void printSolution(const std::vector<double>& solutions) {
  * @param c свободный член
  * @param solutions вектор решений
  */
-void solveLinearEquation(const double b, const double c, std::vector<double>& solutions) {
+int solveLinearEquation(const double b, const double c, double& x1) {
     if(equals(b, 0)){
         if (equals(c, 0)) {
-            solutions = INFINITESOLUTIONS;
-            return;
+            return INFINITESOLUTIONS;
         } else {
-            return;
+            return 0;
         }
     }
-    solutions = {-c / b};
+    x1 = -c / b;
+    return 1;
 }
+
 /**
  * вычисляеи детерминант квадратного уравнения
  * @param a старший коэффициент
@@ -87,6 +87,7 @@ void solveLinearEquation(const double b, const double c, std::vector<double>& so
 double getDeterminant(const double a, const double b, const double c){
     return b*b - 4*a*c;
 }
+
 /**
  * решает квадратное уравнение
  * @param a старший коэффициент
@@ -94,27 +95,31 @@ double getDeterminant(const double a, const double b, const double c){
  * @param c свободный член
  * @param solutions вектор решений
  */
-
-std::vector<double> solveEquation(const double a, const double b, const double c) {
+int solveEquation(const double a, const double b, const double c, double& x1, double& x2) {
+    //c == 0!!!
     std::vector<double> solutions = {};
-    if(equals(a, 0) ){
-        solveLinearEquation(b, c, solutions);
+    if(equals(a, 0)){
+        return solveLinearEquation(b, c, x1);
     } else {
+        if(equals(c, 0)){
+            x1 = 0;
+            x2 = -b / a;
+            return 2;
+        }
         double d = getDeterminant(a, b, c);
         if(equals(d, 0)){
-            solutions = {-b / 2 / a};
-            return solutions;
+            x1 = -b / 2 / a;
+            return 1;
         }
         if(d < 0){
-            return solutions;
+            return 0;
         }
-        double x1 = (-b - std::sqrt(d))/(2 * a);//Дважды считать корень?
-        double x2 = (-b + std::sqrt(d))/(2 * a);
-        solutions = {x1, x2};
+        x1 = (-b - std::sqrt(d))/(2 * a);//Дважды считать корень?
+        x2 = (-b + std::sqrt(d))/(2 * a);
+        return 2;
     }
-    return solutions;
 }
-
+/*
 void consoleWork(){
     double a, b, c;
     std::vector<double> solutions;
@@ -123,3 +128,4 @@ void consoleWork(){
     normalize(solutions);
     printSolution(solutions);
 }
+*/

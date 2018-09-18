@@ -3,14 +3,18 @@
 #include <vector>
 #include <algorithm>
 #include <cstring>
+#include <utility>
+#include <functional>
 #include <assert.h>
 
-#define INPUTFILEPATH "./../hamlet.txt"
-
-
-long readText(char *&buffer){
-    std::ifstream infile (INPUTFILEPATH,std::ifstream::binary);
-
+/**
+ * Считывает исходный текст в массив
+ * @param buffer массив с текстом
+ * @param filename название файла
+ * @return размер считанного фрагмента
+ */
+long readText(char *&buffer, char* filename){
+    std::ifstream infile (filename, std::ifstream::binary);
     infile.seekg (0, infile.end);
     long size = infile.tellg();
     infile.seekg (0);
@@ -21,52 +25,95 @@ long readText(char *&buffer){
     return size;
 }
 
+/**
+ * Экономично переписывает текст в другой файл
+ * @param text массив с текстом
+ * @param size его размер
+ * @param filename название файла
+ */
 void rewriteText(char* text, size_t size, char* filename){
     std::ofstream outfile (filename,std::ofstream::binary);
     outfile.write (text, size);
     outfile.close();
 }
 
-void writeText(std::vector<char*>& text, char* filename){
+/**
+ * записывает переупорядоченный текст
+ * @param starts массив с указателями на строки в нужном порядке
+ * @param starts_size размер starts
+ * @param filename файл, в который пишем
+ */
+void writeText(char** starts, size_t starts_size, char* filename){
     std::ofstream ofstream (filename, std::ofstream::out);
-    for(char* string : text) {
-        ofstream << string << std::endl;
+    for(long i = 0; i < starts_size; ++i) {
+            ofstream << starts[i] << std::endl;
     }
     ofstream.close();
-
 }
 
-void splitText(char* text, size_t size, std::vector<char*>& starts){
-    starts.push_back(text);
+/**
+ * разделяет текст на строки
+ * @param text текст
+ * @param size размер текста
+ * @param starts массив, в котором будут храниться строки
+ * @return рказмер получившегося массива
+ */
+size_t splitText(char* text, size_t size, char**& starts){
+    size_t starts_size = 1;
+    for(long ind = 0; ind < size; ++ind){
+        if(text[ind] == '\n'){
+            starts_size++;
+        }
+    }
+    starts = new char*[starts_size];
+
+    starts[0] = text;
+    size_t ind = 1;
     for(long i = 0; i < size; ++i) {
         if (text[i] == '\n') {
-            starts.push_back(text + i + 1);
+            starts[ind] = text + i + 1;
+            ind++;
             text[i] = '\0';
         }
     }
+    return starts_size;
 }
 
-void clearStarts(std::vector<char*>& starts){
-    for(char*& string : starts){
-        while(string[0] == ' '){
-            string++;
+/**
+ * Делает обработку массива строк:
+ * убирает пробелы в начале, убирает пустые строки
+ * @param starts массив со строками
+ * @param starts_size его размер
+ */
+void clearStarts(char** starts, size_t& starts_size){
+    for(size_t i = 0; i < starts_size; ++i){
+        while(starts[i][0] == ' '){
+            starts[i]++;
         }
     }
     size_t ind = 0;
-    while( ind < starts.size()){
+    while(ind < starts_size){
         if(strlen(starts[ind]) == 0) {
-            std::swap(starts[ind], starts[starts.size() - 1]);
-            starts.pop_back();
+            std::swap(starts[ind], starts[starts_size - 1]);
+            starts_size--;
         } else {
             ind++;
         }
     }
 }
 
+/**
+ * проверяет, завершается ли на данном символе строка
+ * @param a проверяемый символ
+ * @return true, если a - завершающий
+ */
 bool isFinishingSymbol(char a){
     return (a == '\0' || a == '\n');
 }
 
+/**
+ * Компаратор для упорядочивания по алфавиту
+ */
 struct alphabetComparator {
     bool operator()(char* a, char* b) const
     {
@@ -85,18 +132,26 @@ struct alphabetComparator {
     }
 };
 
+/**
+ * Ищет последний буквенный символ строки
+ * @param a строка текста
+ * @return индекс нужного символа
+ */
 size_t getLastLetter(char* a) {
     size_t ind = strlen(a);
     while (ind > 0) {
-        ind--;
-        if (a[ind] != '.' && a[ind] != ',' &&
-            a[ind] != '!' && a[ind] != '?') {
-            return ind + 1;
+        if ((('A' <= a[ind-1]) && (a[ind-1] <= 'Z')) ||
+            (('a' <= a[ind-1]) && (a[ind-1] <= 'z'))) {
+            return ind;
         }
+        ind--;
     }
     return 1;
 }
 
+/**
+ * сортирует по рифме
+ */
 struct cramboComparator {
     bool operator()(char* a, char* b) const
     {
@@ -118,30 +173,33 @@ struct cramboComparator {
 
 };
 
-void makeDictioary(std::vector<char*>& starts){
-    alphabetComparator comparator;
-    std::vector<char*> alphabetSorted = starts;
-    std::sort(alphabetSorted.begin(), alphabetSorted.end(), comparator);
-    writeText(alphabetSorted,"./../hamlet_encyclopedy");
-}
-
-
-void makeCramoDictioary(std::vector<char *> &starts){
-    cramboComparator comparator;
-    std::vector<char*> cramboSorted = starts;
-    std::sort(cramboSorted.begin(), cramboSorted.end(), comparator);
-    writeText(cramboSorted,"./../hamlet_crambo_dictionary");
+/**
+ * Делаем словарь по нужному нам порядку
+ * @tparam T компаратор, по которому текаст сортируется
+ * @param starts массив из строк текста
+ * @param starts_size его длинва
+ * @param filename название файла, в который производим запись отсортированного текста
+ */
+template <typename T>
+void makeDictioary(char** starts, size_t starts_size, char* filename){
+    T comparator;
+    char** starts_sorted = new char* [starts_size];
+    std::memcpy(starts_sorted, starts, starts_size * sizeof(starts[0]));
+    std::sort(starts_sorted, starts_sorted + starts_size, comparator);
+    writeText(starts_sorted, starts_size, filename);
+    delete[] starts_sorted;
 }
 
 int main () {
     char* text = nullptr;
-    long size = readText(text);
+    long size = readText(text, "./../hamlet.txt");
     rewriteText(text, size, "./../hamlet(copy).txt");
-    std::vector<char*> starts = {};
-    splitText(text, size, starts);
-    clearStarts(starts);
-    makeDictioary(starts);
-    makeCramoDictioary(starts);
-    delete[] text;//!!!!не чистица
+    char** starts = nullptr;
+    size_t starts_size = splitText(text, size, starts);
+    clearStarts(starts, starts_size);
+    makeDictioary<alphabetComparator>(starts, starts_size, "./../hamlet_ecyclopedy.txt");
+    makeDictioary<cramboComparator>(starts, starts_size, "./../hamlet_cramo_ecyclopedy.txt");
+    delete[] starts;
+    delete[] text;
     return 0;
 }

@@ -1,0 +1,179 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structalphabet_comparator}{alphabet\+Comparator}}
+\item 
+struct \mbox{\hyperlink{structcrambo_comparator}{crambo\+Comparator}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{main_8cpp_a6208e631ab583d306613a567c343b6b0}{read\+Text}} (char $\ast$\&buffer, char $\ast$filename)
+\item 
+void \mbox{\hyperlink{main_8cpp_ae4aea33b3b5b0bab5582a79081cf4a65}{rewrite\+Text}} (char $\ast$text, size\+\_\+t size, char $\ast$filename)
+\item 
+void \mbox{\hyperlink{main_8cpp_abc81e1ecc4556950ac796827d90fbadd}{write\+Text}} (char $\ast$$\ast$starts, size\+\_\+t starts\+\_\+size, char $\ast$filename)
+\item 
+size\+\_\+t \mbox{\hyperlink{main_8cpp_a8f2b272aaeffc27383a4d1f5c890923b}{split\+Text}} (char $\ast$text, size\+\_\+t size, char $\ast$$\ast$\&starts)
+\item 
+void \mbox{\hyperlink{main_8cpp_a44d9a97b1c2f0fe555423956e717787a}{clear\+Starts}} (char $\ast$$\ast$starts, size\+\_\+t \&starts\+\_\+size)
+\item 
+bool \mbox{\hyperlink{main_8cpp_a6f6db43b711b985a32617d727fd5e642}{is\+Finishing\+Symbol}} (char a)
+\item 
+size\+\_\+t \mbox{\hyperlink{main_8cpp_a85721839daf45c333244680e690b0c48}{get\+Last\+Letter}} (char $\ast$a)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{main_8cpp_a7c851ac602b1672773469651ec02bda4}{make\+Dictioary}} (char $\ast$$\ast$starts, size\+\_\+t starts\+\_\+size, char $\ast$filename)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a44d9a97b1c2f0fe555423956e717787a}\label{main_8cpp_a44d9a97b1c2f0fe555423956e717787a}} 
+\index{main.\+cpp@{main.\+cpp}!clear\+Starts@{clear\+Starts}}
+\index{clear\+Starts@{clear\+Starts}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{clear\+Starts()}{clearStarts()}}
+{\footnotesize\ttfamily void clear\+Starts (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{starts,  }\item[{size\+\_\+t \&}]{starts\+\_\+size }\end{DoxyParamCaption})}
+
+Делает обработку массива строк\+: убирает пробелы в начале, убирает пустые строки 
+\begin{DoxyParams}{Parameters}
+{\em starts} & массив со строками \\
+\hline
+{\em starts\+\_\+size} & его размер \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a85721839daf45c333244680e690b0c48}\label{main_8cpp_a85721839daf45c333244680e690b0c48}} 
+\index{main.\+cpp@{main.\+cpp}!get\+Last\+Letter@{get\+Last\+Letter}}
+\index{get\+Last\+Letter@{get\+Last\+Letter}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Last\+Letter()}{getLastLetter()}}
+{\footnotesize\ttfamily size\+\_\+t get\+Last\+Letter (\begin{DoxyParamCaption}\item[{char $\ast$}]{a }\end{DoxyParamCaption})}
+
+Ищет последний буквенный символ строки 
+\begin{DoxyParams}{Parameters}
+{\em a} & строка текста \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+индекс нужного символа 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a6f6db43b711b985a32617d727fd5e642}\label{main_8cpp_a6f6db43b711b985a32617d727fd5e642}} 
+\index{main.\+cpp@{main.\+cpp}!is\+Finishing\+Symbol@{is\+Finishing\+Symbol}}
+\index{is\+Finishing\+Symbol@{is\+Finishing\+Symbol}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{is\+Finishing\+Symbol()}{isFinishingSymbol()}}
+{\footnotesize\ttfamily bool is\+Finishing\+Symbol (\begin{DoxyParamCaption}\item[{char}]{a }\end{DoxyParamCaption})}
+
+проверяет, завершается ли на данном символе строка 
+\begin{DoxyParams}{Parameters}
+{\em a} & проверяемый символ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если a -\/ завершающий 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{main_8cpp_a7c851ac602b1672773469651ec02bda4}\label{main_8cpp_a7c851ac602b1672773469651ec02bda4}} 
+\index{main.\+cpp@{main.\+cpp}!make\+Dictioary@{make\+Dictioary}}
+\index{make\+Dictioary@{make\+Dictioary}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{make\+Dictioary()}{makeDictioary()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void make\+Dictioary (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{starts,  }\item[{size\+\_\+t}]{starts\+\_\+size,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Делаем словарь по нужному нам порядку 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & компаратор, по которому текаст сортируется \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em starts} & массив из строк текста \\
+\hline
+{\em starts\+\_\+size} & его длинва \\
+\hline
+{\em filename} & название файла, в который производим запись отсортированного текста \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{main_8cpp_a6208e631ab583d306613a567c343b6b0}\label{main_8cpp_a6208e631ab583d306613a567c343b6b0}} 
+\index{main.\+cpp@{main.\+cpp}!read\+Text@{read\+Text}}
+\index{read\+Text@{read\+Text}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Text()}{readText()}}
+{\footnotesize\ttfamily long read\+Text (\begin{DoxyParamCaption}\item[{char $\ast$\&}]{buffer,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Считывает исходный текст в массив 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & массив с текстом \\
+\hline
+{\em filename} & название файла \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+размер считанного фрагмента 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ae4aea33b3b5b0bab5582a79081cf4a65}\label{main_8cpp_ae4aea33b3b5b0bab5582a79081cf4a65}} 
+\index{main.\+cpp@{main.\+cpp}!rewrite\+Text@{rewrite\+Text}}
+\index{rewrite\+Text@{rewrite\+Text}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{rewrite\+Text()}{rewriteText()}}
+{\footnotesize\ttfamily void rewrite\+Text (\begin{DoxyParamCaption}\item[{char $\ast$}]{text,  }\item[{size\+\_\+t}]{size,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+Экономично переписывает текст в другой файл 
+\begin{DoxyParams}{Parameters}
+{\em text} & массив с текстом \\
+\hline
+{\em size} & его размер \\
+\hline
+{\em filename} & название файла \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a8f2b272aaeffc27383a4d1f5c890923b}\label{main_8cpp_a8f2b272aaeffc27383a4d1f5c890923b}} 
+\index{main.\+cpp@{main.\+cpp}!split\+Text@{split\+Text}}
+\index{split\+Text@{split\+Text}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{split\+Text()}{splitText()}}
+{\footnotesize\ttfamily size\+\_\+t split\+Text (\begin{DoxyParamCaption}\item[{char $\ast$}]{text,  }\item[{size\+\_\+t}]{size,  }\item[{char $\ast$$\ast$\&}]{starts }\end{DoxyParamCaption})}
+
+разделяет текст на строки 
+\begin{DoxyParams}{Parameters}
+{\em text} & текст \\
+\hline
+{\em size} & размер текста \\
+\hline
+{\em starts} & массив, в котором будут храниться строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+рказмер получившегося массива 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_abc81e1ecc4556950ac796827d90fbadd}\label{main_8cpp_abc81e1ecc4556950ac796827d90fbadd}} 
+\index{main.\+cpp@{main.\+cpp}!write\+Text@{write\+Text}}
+\index{write\+Text@{write\+Text}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{write\+Text()}{writeText()}}
+{\footnotesize\ttfamily void write\+Text (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{starts,  }\item[{size\+\_\+t}]{starts\+\_\+size,  }\item[{char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+записывает переупорядоченный текст 
+\begin{DoxyParams}{Parameters}
+{\em starts} & массив с указателями на строки в нужном порядке \\
+\hline
+{\em starts\+\_\+size} & размер starts \\
+\hline
+{\em filename} & файл, в который пишем \\
+\hline
+\end{DoxyParams}
